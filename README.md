@@ -49,7 +49,7 @@ SpotBugs reported two issues:
 *Screenshot of initial SpotBugs findings.*
 
 ## Fixes Applied
-1. Default Encoding Warning (Dm)
+### 1. Default Encoding Warning (Dm)
 SpotBugs warns when Scanner is created without specifying a charset.
 
 **Before:**
@@ -63,7 +63,7 @@ import java.nio.charset.StandardCharsets;
 Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
 ```
 
-2. Unread Field (UrF)
+### 2. Unread Field (UrF)
 The intentionally added dbPassword field was unused.
 
 **Before:**
