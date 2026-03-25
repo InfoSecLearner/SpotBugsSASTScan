@@ -30,8 +30,9 @@ spotbugs -textui .
 ## Intentional Issue Added
 
 To demonstrate how SpotBugs detects unused or sensitive fields, the following line was added:
-
+```java
 String dbPassword = "P@ssw0rd!";
+```
 
 SpotBugs correctly flags this as an Unread Field (UrF) and a potential security concern.
 
@@ -47,20 +48,28 @@ SpotBugs reported two issues:
 1. Default Encoding Warning (Dm)
 SpotBugs warns when Scanner is created without specifying a charset.
 
-Before:
+**Before:**
+```java
 Scanner scanner = new Scanner(System.in);
+```
 
-After:
+**After:**
+```java
 Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
+```
 
 2. Unread Field (UrF)
 The intentionally added dbPassword field was unused.
 
 Before:
+```java
 String dbPassword = "P@ssw0rd!";
+```
 
 After:
+```java
 The variable was removed.
+```
 
 ## Final Clean Scan
 After applying the fixes, SpotBugs reports no remaining issues.
