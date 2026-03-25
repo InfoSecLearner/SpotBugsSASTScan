@@ -66,13 +66,14 @@ Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
 2. Unread Field (UrF)
 The intentionally added dbPassword field was unused.
 
-Before:
+**Before:**
 ```java
 String dbPassword = "P@ssw0rd!";
 ```
 
-After:
-The variable was removed.
+**After:**
+
+*The variable was removed.*
 
 ## Final Clean Scan
 After applying the fixes, SpotBugs reports no remaining issues.
