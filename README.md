@@ -22,10 +22,14 @@ The scanned application is the **SecureLoginApp** from the previous project, wit
 ## How to Run the Scan
 
 Compile the Java file:
+```bash
 javac SecureLoginApp.java
+```
 
 Run SpotBugs:
+```bash
 spotbugs -textui .
+```
 
 ## Intentional Issue Added
 
@@ -67,9 +71,7 @@ String dbPassword = "P@ssw0rd!";
 ```
 
 After:
-```java
 The variable was removed.
-```
 
 ## Final Clean Scan
 After applying the fixes, SpotBugs reports no remaining issues.
