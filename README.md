@@ -59,6 +59,7 @@ Scanner scanner = new Scanner(System.in);
 
 **After:**
 ```java
+import java.nio.charset.StandardCharsets;
 Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
 ```
 
@@ -75,6 +76,7 @@ The variable was removed.
 
 ## Final Clean Scan
 After applying the fixes, SpotBugs reports no remaining issues.
+
 <img width="586" height="65" alt="CleanCode_Screenshot" src="https://github.com/user-attachments/assets/34915db7-ca9e-4a8d-9dfa-81a8962856f4" />
 
 *Screenshot of clean SpotBugs scan.*
